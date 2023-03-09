@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Dynamic Web TWAIN</title>
     <script src="node_modules/dwt/dist/dynamsoft.webtwain.min.js"></script>
-
+    <style>
+        .container {
+            position: absolute;
+            top: 10%;
+            left: 10;
+        }
+    </style>
 </head>
 
 <body>
-    <h1></h1>
-    <br />
-    <br />
-
-    <div id="document-container"></div>
+    <div id="document-container" class="container"></div>
 
     <script>
         if (window.chrome.webview != "undefined") {
@@ -40,7 +42,7 @@
 
         var sourceNames = [];
         var sourceList = [];
-        Dynamsoft.DWT.ProductKey = "t0185SwUAAA9DtZZyNs01/88YNp3d1846dSFHj/pcXgG8GDPK1cQGtmw1gVNXVOWe2mSfUfkMeSREUNGGFZB1eFqkwoQl8+oZ7sOtpuU+Wj2vxV77QBct+S4h8NlugedS+jR/iU/DGw7AawF0XZAVoBJI7WyAt8bbmiEDuAVoA0hJV4GfTe6nNte71HA0XlSd3MGp1zvLjb3GWa7rv85pV6chykdBYwKonHIGcAvQBpACyADn2czYvuH4CfU=";
+        Dynamsoft.DWT.ProductKey = "LICENSE-KEY";
         Dynamsoft.DWT.ResourcesPath = "node_modules/dwt/dist/";
         var dwtObject = null;
         Dynamsoft.DWT.CreateDWTObjectEx({ "WebTwainId": "container" }, (obj) => {
@@ -54,6 +56,10 @@
         }, (errorString) => {
             console.log(errorString);
         });
+
+        function setLicense(key) {
+            Dynamsoft.DWT.ProductKey = key;
+        }
 
         function onReady() {
             if (dwtObject != null) {
@@ -132,7 +138,7 @@
                     }
 
                 )
-            } 
+            }
 
 
         }
