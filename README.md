@@ -3,14 +3,15 @@
 The sample demonstrates how to integrate Dynamic Web TWAIN into Flutter Windows desktop application.
 
 ## Getting Started
-1. Apply for a trial license at [https://www.dynamsoft.com/customer/license/trialLicense](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt)
+1. Apply for a trial license at [https://www.dynamsoft.com/customer/license/trialLicense](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt).
 2. Update the license key in `lib/assets/index.html`:
     ```html
     Dynamsoft.DWT.ProductKey = "LICENSE-KEY";
     ```
-3. Run the sample:
+3. Install `/lib/assets/node_modules/dwt/dist/dist/DynamsoftServiceSetup.msi`.
+4. Run the sample:
     ```bash
     flutter run -d windows
     ```
 
-    ![flutter desktop scanner application with Dynamic Web TWAIN](https://www.dynamsoft.com/codepool/img/2023/03/web-twain-desktop-scanner.png)
+    ![flutter desktop scanner application with Dynamic Web TWAIN](https://www.dynamsoft.com/codepool/img/2023/03/flutter-windows-desktop-web-twain.gif)
