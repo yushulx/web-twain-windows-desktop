@@ -53,7 +53,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
       await _controller.loadUrl(Uri.file(assetsDirectory).toString());
 
-      /// Listen to web to receive barcode
       _controller.webMessage.listen((event) {
         if (event['event'] == null) return;
 
